@@ -14,3 +14,4 @@ function palindrome(str) {
   let check = array.join("");
   
   return (check == str);
+}
