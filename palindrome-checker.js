@@ -5,13 +5,9 @@ A palindrome is a word or sentence that's spelled the same way both forward and 
 ignoring punctuation, case, and spacing.
 */
 
-function palindrome(str) {
-  str = str.toLowerCase();
-  str = str.replace(" ", "");
-  str = str.replace(/[^0-9a-z]/gi, '');
-  let array = str.split("");
-  array = array.reverse();
-  let check = array.join("");
+function isPalindrome (text) {
+  const cleanedText = text.toLowerCase().replace(' ', '').replace(/[^0-9a-z]/gi, '')
+  const reversedText = cleanedText.split('').reverse().join('')
   
-  return (check == str);
+  return cleanedText == reversedText
 }
